@@ -124,6 +124,10 @@ circuit = Circuit.from_cirq(cirq_circuit)
 circuit = Circuit.from_pennylane(qnode)
 ```
 
+## Marqov Platform
+
+The SDK runs standalone, but the [Marqov platform](https://marqov.ai) removes the infrastructure overhead, with an integrated Temporal worker, job tracking and cost visibility built in, and one-click access to every supported QPU. Scripts written against the SDK run unchanged on the platform via `MarqovDevice`, so the platform handles backend routing, retries, and result storage. In private beta (but early teams are granted QPU credits).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the executor interface spec, canonical gate set, factory registration steps, and local QVM setup for Rigetti development.
