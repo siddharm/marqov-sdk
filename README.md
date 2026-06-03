@@ -121,7 +121,7 @@ Import from other formats:
 ```python
 circuit = Circuit.from_qiskit(qiskit_circuit)
 circuit = Circuit.from_cirq(cirq_circuit)
-circuit = Circuit.from_pennylane(qnode)
+circuit = Circuit.from_pennylane(tape)
 ```
 
 ## Marqov Platform
