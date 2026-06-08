@@ -575,7 +575,7 @@ class TestSerialization:
 class TestToPennylane:
     """Tests for Circuit.to_pennylane()."""
 
-    def test_roundtrip_bell_state():
+    def test_roundtrip_bell_state(self):
         """Bell state survives to_pennylane roundtrip."""
         original = bell_state()
         pennylane = original.to_pennylane()
@@ -587,7 +587,7 @@ class TestToPennylane:
         rest_state = restored.simulate().tensor.flatten()
         assert np.allclose(np.abs(orig_state), np.abs(rest_state))
 
-    def test_to_pennylane_angle():
+    def test_to_pennylane_angle(self):
         """Angle survives conversion to pennylane"""
         original_angle = 50
         original = Circuit()
@@ -596,7 +596,7 @@ class TestToPennylane:
         pennylane_angle = pennylane.get_parameters()[0]
         assert original_angle == pennylane_angle
 
-    def test_every_gate():
+    def test_every_gate(self):
         """Every gate survives conversion to pennylane"""
         angle = 50
         marqov_circuit = Circuit()
